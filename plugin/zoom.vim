@@ -6,6 +6,7 @@ if !exists('g:zoom_tmux_z')
   let g:zoom_tmux_z = v:false
 endif
 
+command -nargs=0 ZoomToggle call zoom#toggle()
 nnoremap <silent> <Plug>(zoom-toggle) :call zoom#toggle()<CR>
 
 if !hasmapto('<Plug>(zoom-toggle)')
